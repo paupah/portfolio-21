@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  color: #615e5f;
+}
+
 body {
 	display: flex;
 	align-items: center;
@@ -22,11 +27,18 @@ body {
 
 .split-container {
 	display: flex;
-  margin: 200px 0;
+  margin: 90px 0 200px;
 }
 
 .split-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 400px;
+}
+
+.relative {
+  position: relative;
 }
 
 .shadow-container {
@@ -92,8 +104,8 @@ body {
 }
 
 .card__image {
-  max-width: 100px;
-  width: 100%;
+  margin-bottom: 36px;
+  height: 50px;
 }
 
 .modal {
@@ -106,8 +118,6 @@ body {
   flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
 	background: lightgray;
 }
 
@@ -115,9 +125,57 @@ body {
 	display: flex;
 }
 
+.modal__content {
+  height: 90vh;
+  width: 90%;
+  overflow: auto;
+}
+
+.modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal__content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.modal__image {
+  width: 200px;
+  height: auto;
+}
+
+.modal__image-screens {
+  height: 700px;
+
+}
+
 .close {
 	position: absolute;
-	top: 24px;
-	right: 24px;
+	top: 0;
+	right: 0;
+  padding: 24px;
 	cursor: pointer;
+  font-size: 32;
 }
+
+.pill {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+/* .modal__header-copy-container {
+  margin-left: 24px;
+} */
